@@ -1,5 +1,5 @@
 @charset "utf-8";
-body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin: 0; padding: 0; }
+/*body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin: 0; padding: 0; }
 h1,h2,h3,h4,h5,h6,strong,b{font-weight:normal;}
 i,em{font-style:normal;}
 a{text-decoration:none; color:#666;font-size: 12px}
@@ -12,4 +12,13 @@ body{font-size: 12px;font-family:"微软雅黑";}
 .fr{float:right;}
 .clear:after{content:"."; display:block; clear:both; height:0; visibility:hidden;}
 table{border-collapse:collapse;}
-.border0,.noborder{border:none;}
+.border0,.noborder{border:none;}*/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin: 0; padding: 0; }
+body{ min-width:1220px;}
+body, button, input, select, textarea {font: 12px/1.5 tahoma,verdana,arial,helvetica,sans-serif,"å®‹ä½“";} 
+a {color:#666; text-decoration: none; }
+fieldset, img { border: 0; }
+.clearfix:after { content:"."; display:block; clear:both; visibility:hidden; font-size:0; line-height:0; height:0; } 
+.clearfix { *zoom:1; /* IE6 7 */ }
+ul,li,dl,dt,dd,ol{list-style: none;}
+img {border: none;}
