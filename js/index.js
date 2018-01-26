@@ -65,32 +65,7 @@ $(".toRight").click(autoPlay)
 			})
 		}
 	})
-//轮播图 淡入浅出（2）
-	// var time= setInterval(autoP,2000);
-	// var inde = 0;
-	// function autoP(){
-	// 	inde++;
-	// 	if( inde == $(".tul li").size() ){
-	// 		inde = 0;
-	// 	}
-	// 	$(".tul li").eq(inde)
-	// 			  .addClass("on")
-	// 			  .siblings()
-	// 			  .removeClass("on");
-	// 	$(".two-con li").eq(inde)
-	// 			  .fadeIn(1000)
-	// 			  .siblings()
-	// 			  .fadeOut(1000);
-	// }
-	// console.log($(".tul"))
-	// $(".tul").mouseenter(function(){
-	// 	clearInterval(time);
-	// 	inde = $(this).index()-1;
-	// 	autoP();
-	// })
-	// $(".tul").mouseleave(function(){
-	// 	time = setInterval(autoP,1500);
-	// })
+ 
 	var time= setInterval(autoPla,2000);
 	var two = 0;
 	function autoPla(){

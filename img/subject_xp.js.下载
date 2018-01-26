@@ -1,0 +1,80 @@
+$(function(){
+		$(".catalog-list .cata-group").hover(function() {
+			$(this).addClass("over-group");
+			$(this).find(".j_navbg").css("visibility","visible");
+		},function() {
+			$(this).removeClass("over-group");
+			$(this).find(".j_navbg").css("visibility","hidden");
+		});
+		$('#floatad-winpop2 .close').click(function(){
+			$('#floatad-winpop2').stop().animate({bottom:'-212px'},{queue:false,duration:300});
+		});		
+		if($(".footer_common").length>0){
+			$(".footer_common").find("li").click(function(){
+				var index=$(this).index(),
+					day_content_pos=$(".ecd-index-floorlayout").eq(index).offset().top-10;
+				$('html,body').animate({scrollTop:day_content_pos}, 400);
+			});
+		};	
+});	
+
+
+jQuery(document).ready(function($) {
+	try{
+		var f1 = $('.ecd-index-floorlayout[data-slide="1"]').offset().top;
+		var fs = $('#navfix').children().size();
+		var fss = new Array();
+		for (i = 0; i < fs; i++) {
+			j = i + 1;
+			fss[i] = $('.ecd-index-floorlayout[data-slide="' + j + '"]').offset().top;
+		}
+		
+		$(window).scroll(function(){	
+			var currentTOP = $(window).scrollTop();
+			if(currentTOP>f1){
+				$(".hd").addClass("fixeddiv");
+			}else{
+				$(".hd").removeClass("fixeddiv");
+			}		
+			if (currentTOP <= f1) {	
+				$('#navfix a').removeClass('on');
+				$('#navfix a[data-slide="1"]').addClass('on');
+				return;
+			}else{		
+				changefl(getFloor(currentTOP+150));	
+			}
+		});
+		
+		
+		function getFloor(fh){
+			if(fs==0||fh<=f1){
+				return 1;
+			}
+			if(fh>=fss[fs-1]){		
+				return fs;
+			}		
+			for (k=0; k<fs;k++) {								
+				if(fh>fss[k]&&fh<fss[k+1]){
+					return k+1;
+				}
+			}
+		}
+		
+		function changefl(fno){
+			$('#navfix a').removeClass('on');
+			$('#navfix a[data-slide="'+fno+'"]').addClass('on');
+		}
+		
+	}catch(e){
+		console.log(e);
+	}
+	});
+
+	function gotofloor(thiz) {
+		dataslide = $(thiz).attr('data-slide');
+		var pos = $('.ecd-index-floorlayout[data-slide="' + dataslide + '"]').offset().top-80;// 获取该点到头部的距离
+		$("html,body").animate({
+			scrollTop : pos
+		}, 800);
+	}
+
