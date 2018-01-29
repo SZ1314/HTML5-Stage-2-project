@@ -33,7 +33,7 @@
 .search-hots li:last-child{border:0px;padding-right:0px;}
 
 /**导航**/
-#mallnav { width: 100%; min-width:1000px;}
+#mallnav{min-width: 1000px;height:35px;background: #d71e00;border-bottom: 2px solid #aa1800;}
 .all-nav { width: 1220px; height: 33px; margin: 0 auto; position: relative; }
 .all-nav-cate { position: absolute; top: 0; left: 0; }
 .all-nav-cate .all-nav-cit { display: block; width: 238px; height: 33px; line-height: 33px; text-align: center; background: #d71e00; color: white; font-size: 16px; font-family: Tahoma, Arial, Hiragino Sans GB, Microsoft Yahei; text-decoration: none; }
@@ -99,6 +99,17 @@ background:url(../img/channel_ico2.png) no-repeat center right }
 .listad li a{display:block;}
 .dl-cata-words .listad{position: absolute;margin-right: 56px;right: 1px;top: -9px;}
 .dl-cata-words .listad li img{height: 250px;width: 200px;}
+#mallnav .all-nav{width: 1250px;}
+#mallnav .all-nav-cit{height: 35px;font-size: 14px;}
+#mallnav .all-nav-chn li a{color:#fff;font-size: 14px;}
+#mallnav .all-nav-chn .navcur{height:35px;background: #aa1800;}
+#mallnav .all-nav-chn li a:hover{background: #aa1800;}
+.nav_li a .nav_li_img {display: inline-block;vertical-align: middle;width: 26px;height: 26px;}
+
+.all-nav{ width: 1220px; height: 35px; margin: 0 auto; position: relative; }
+.all-nav .all-nav-chn {height: 35px; }
+.all-nav .all-nav-chn li{height: 35px; }
+.all-nav .all-nav-chn li a{height: 35px; }
 .dl-cata-words .listad .lis_1{margin-bottom: 6px;}
 /*尖角*/
-em{position: absolute;top: 15px;right: 45px;border-width: 5px 5px 0;border-style: solid dashed dashed;border-color: #fff transparent transparent;}
+.mallnav .all-nav em{position: absolute;top: 15px;right: 45px;border-width: 5px 5px 0;border-style: solid dashed dashed;border-color: #fff transparent transparent;}
