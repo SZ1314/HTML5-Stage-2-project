@@ -1,4 +1,44 @@
+function $id(id){
+	return document.getElementById(id);
+}
+	$(".next-btn").click(function(){
+		if( flagMail && falgPw && falgRadom && hobby() ){
+		//存cookie
+			var uname = $(".title").val();
+			var upwd = $(".txt").val();
+			var d = new Date();
+			d.setDate( d.getDate() + 1 );
+			document.cookie = "username" + uname +","+ upwd ;";expires="+d;
+				alert("注册成功");
+		}else{
+			alert("eqw")
+		}
+	})
+	// $("login").onclick = function(){
+	// 	//取出cookie
+	// 	var str = document.cookie;
+	// 	//"username=lichune; userpwd=lichune"
+	// 	var arr = str.split("; ");
+	// 	for( var i = 0 ; i < arr.length ; i++ ){
+	// 		var item = arr[i].split("=");
+	// 		if( item[0] == "username" ){
+	// 			tname = item[1];//将用户名预存到一个变量中
+	// 		}
+	// 		if( item[0] == "userpwd" ){
+	// 			tpwd = item[1];//将密码预存到变量中
+	// 		}
+	// 	}
+	// 	//获取用户输入的用户名和密码
+	// 	var uname = $("tname").value;
+	// 	var upwd = $("tpwd").value;
+	// 	if( uname == tname && upwd == tpwd ){
+	// 		location.href = "page.html";
+	// 	}else{
+	// 		alert("登录失败");
+	// 	}
+	// }
 
+	var flagMail = null;
 	//手机/邮箱
 	$(".title").blur(function(){
 		var reg = /^1[34578]\d{9}$/;
@@ -8,15 +48,16 @@
 			$(".elm").html("通过验证!")
 					 .addClass("varify-true")
 					 .removeClass("varify-false")
-			return true
+			flagMail = true
 		}else{
 			$(".elm").html("输入有误!")
 					 .addClass("varify-false")
 					 .removeClass("varify-true")
-			return false
+			flagMail = false
 		}
 	})
 
+	var falgPw = null;
 	// 密码
 	$(".txt").blur(function(){
 		var reg = /^.{6,}$/;
@@ -25,16 +66,17 @@
 			$(".pw").html("通过验证!")
 					 .addClass("varify-true")
 					 .removeClass("varify-false")
-			return true
+			falgPw = true
 		}else{
 			$(".pw").html("输入有误!")
 					 .addClass("varify-false")
 					 .removeClass("varify-true")	
-			return false
+			falgPw = false
 		}
 	})
 
 
+	var falgRadom = null;
 	//随机验证码
 	$("#code_input").blur(function(){
 		var res = verifyCode.validate(document.getElementById("code_input").value);
@@ -42,12 +84,12 @@
 			$(".spn").html("通过验证!")
 					 .addClass("varify-true")
 					 .removeClass("varify-false")
-			return true
+			falgRadom = true
 		}else{
 			$(".spn").html("输入有误!")
 					 .addClass("varify-false")
 					 .removeClass("varify-true")
-			return false
+			falgRadom = false
 		}
 	})
 	
@@ -68,6 +110,11 @@
 		console.log($(this))
 	})
 
+	function hobby(){
+		if( $id("chec").checked ){
+			return true
+		}
+	}
 
 !(function(window, document) {
 	function GVerify(options) { //创建一个图形验证码对象，接收options对象为参数

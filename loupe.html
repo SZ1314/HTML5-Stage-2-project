@@ -22,8 +22,8 @@
 				<p>
 					<a href="#"><span class="iconfont">&#xe750;</span>多商网首页</a>
 					<span>你好,欢迎来到多商玩网！</span>
-					<a href="#">[请登录]</a>
-					<a href="#">[请注册]</a>
+					<a href="login.html">[请登录]</a>
+					<a href="zhuce.html">[请注册]</a>
 				</p>
 			</div>
 			<div class="right">
@@ -987,37 +987,37 @@
 		        <div class="goodsindex_fl">
 		            <div class="box">
 	                	<div class="tb-booth tb-pic tb-s310">
-		                	<a href="#"><img src="img/59b9f3dd9f6b8.jpg" class="jqzoom"></a>
+		                	<a href="#"><img src="img/59b9f3dd9f6b8.jpg" rel="img/59b9f3dd9f6b8.jpg" class="jqzoom"></a>
 	                    </div>
 	                    <ul class="tb-thumb" id="thumblist">
 		                    <li class="tb-selected">
 		                   		<div class="tb-pic tb-s40" >
-		                   			<a href="javascript:;"><img src="img/59b9f3dd9f6b8.jpg" style="width:59px"></a>
+		                   			<a href="javascript:;"><img src="img/59b9f3dd9f6b8.jpg"></a>
 		                   		</div>
 		                    </li>
 		                    <li>
 		                   		<div class="tb-pic tb-s40">
-		                   			<a href="javascript:;"><img src="img/59b9f3de65efa.jpg"  style="width:59px"></a>
+		                   			<a href="javascript:;"><img src="img/59b9f3de65efa.jpg"></a>
 		                   		</div>
 		                    </li>
 		                    <li>
 		                   		<div class="tb-pic tb-s40" >
-		                   			<a href="javascript:;"><img src="img/59b9f3e001d2d.jpg" style="width:59px"></a>
+		                   			<a href="javascript:;"><img src="img/59b9f3e001d2d.jpg"></a>
 		                   		</div>
 		                    </li>
 		                    <li>
 		                   		<div class="tb-pic tb-s40" >
-		                   			<a href="javascript:;"><img src="img/59b9f3e0be610.jpg" style="width:59px"></a>
+		                   			<a href="javascript:;"><img src="img/59b9f3e0be610.jpg"></a>
 		                   		</div>
 		                    </li>
 		                    <li>  
 		                   		<div class="tb-pic tb-s40" >
-		                   			<a href="javascript:;"><img src="img/59b9f3e219aef.jpg" style="width:59px"></a>
+		                   			<a href="javascript:;"><img src="img/59b9f3e219aef.jpg"></a>
 		                   		</div>
 		                    </li>
 		                    <li>
 		                   		<div class="tb-pic tb-s40" >
-		                   			<a href="javascript:;"><img src="img/59b9f44e015db.jpg" style="width:59px"></a>
+		                   			<a href="javascript:;"><img src="img/59b9f44e015db.jpg"></a>
 		                   		</div>
 		                    </li>
 		                </ul>
@@ -1027,8 +1027,8 @@
 		                    $(".jqzoom").imagezoom();
 		                    $("#thumblist li a").hover(function(){
 		                        $(this).parents("li").addClass("tb-selected").siblings().removeClass("tb-selected");
-		                        $(".jqzoom").attr('src',$(this).find("img").attr("mid"));
-		                        $(".jqzoom").attr('rel',$(this).find("img").attr("big"));
+		                        $(".jqzoom").attr('src',$(this).find("img").attr("src"));
+		                        $(".jqzoom").attr('rel',$(this).find("img").attr("src"));
 		                    });
 
 		                });
@@ -1320,9 +1320,9 @@
 								</div>
 					            <div class="pro-search">
 						            <div class="m-body">
-						                	<h3>看了又看<a href="javascript:;" onclick="get_rand();"></a></h3>
-						                  	<ul class="clearfix" id="rand_goods">
-						                    </ul>
+					                	<h3>看了又看<a href="javascript:;" onclick="get_rand();"></a></h3>
+					                  	<ul class="clearfix" id="rand_goods">
+					                    </ul>
 						            </div>
 					            </div>
 					        </div>
@@ -1549,17 +1549,17 @@
 			
 	        </div>
 	        <div class="btn_fr clearfix">
-	        	        	<div class="sale_glian">
-	          	<div class="saletib"><h3>热门产品</h3></div>
-	          	<div class="saleqs" id="all_select">全选</div>
-	            <div class="sale_gliancon">
-	            	<div class="sale_gwrap clearfix">
-	                	<div class="sale_gwscl">
-	                        <div class="picScroll-left">
-	                            <div class="hd">
-	                                <a class="next">&lt;</a>
-	                                <a class="prev">&gt;</a>
-	                            </div>
+	        	<div class="sale_glian">
+		          	<div class="saletib"><h3>热门产品</h3></div>
+		          	<div class="saleqs" id="all_select">全选</div>
+		            <div class="sale_gliancon">
+		            	<div class="sale_gwrap clearfix">
+		                	<div class="sale_gwscl">
+		                        <div class="picScroll-left">
+		                            <div class="hd">
+		                                <a class="next">&lt;</a>
+		                                <a class="prev">&gt;</a>
+		                            </div>
 	                            <div class="bd">
 	                                <div class="tempWrap" style="overflow:hidden; position:relative; width:850px"><ul class="picList clearfix" style="width: 1020px; left: 0px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
 	                                	<li class="sale_gwscla" style="float: left; width: 140px;">
@@ -1617,7 +1617,7 @@
 	                </div>
 	            </div>
 	          </div>
-	                  	<div class="pro_memu">
+	          <div class="pro_memu">
 	                <ul id="container_ul" class="clearfix">
 	                  <li class="li_fpadd on li_fbor" id="content_descript"><span><b class="u_arrow_right"></b></span><a href="javascript:void(0);" hidefocus="true">商品详情</a></li>
 	                  <li class="" id="comment_total_num"><span style="display:none;"><b class="u_arrow_right"></b></span><a href="javascript:void(0);" hidefocus="true">服务承诺与保障</a></li>
@@ -1718,168 +1718,195 @@
 	                
 	                <div class="fwbz" id="fwbzwrap">
 						<div class="fwbz_kf">
-		                      	<h3 id="fwbzwrap_h3">服务承诺&amp;保障</h3>
-		                          <h4>服务承诺</h4>
-		                          <p>正品保证：多商网向您保证所售商品均为厂家正品</p>
-		                          <p class="fwbzla">包退包换：全网商品享受7天内无条件退换货</p>
-		                          <h4>货源保障</h4>
-		                          <p>多商网上的货源均为厂家直供，品牌质量，放心可靠。为保证产品与图片一致，网站展示图片均以产品实物拍摄。</p>
-		                          <p>多商网使用第三方担保交易，支付宝交易更安全。</p>
-		                          <h4>活动支持</h4>
-		                          <p>多商网为分销商提供免费的活动支持。丰富的活动产品，专业的活动支持人员为您提供最完善的活动支持。<a href="http://www.ecduo.cn/goods/cradle.html" target="_blank">立即报活动&gt;&gt;</a></p>
-		                          <h4>售后保障</h4>
-		                          <p>全网一件代发产品均享受七天无理由退换服务。有质量问题可直接联系客服提交退换货申请。</p>
-		                          <h5>退换货流程：</h5>
-		                          <img class="fwbzimgb" src="img/tuihuoliucheng.png" alt="服务保障">
-		                   	</div>
-		                   	<dl class="brand_dl">
-								<dt id="">相关标签:</dt>
-								<dd><a href="#">少女文胸</a></dd>
-								<dd class="separation">|</dd>
-								<dd><a href="#">方巾</a></dd>
-								<dd class="separation">|</dd>
-								<dd><a href="#">长袖T恤</a></dd>
-								<dd class="separation">|</dd>
-								<dd><a href="#>胸包</a></dd>
-								<dd class="separation">|</dd>
-								<dd><a href="#">男士钱包</a></dd>
-								<dd class="separation">|</dd>
-								<dd><a href="#">帆布包包</a></dd>
-								<dd class="separation">|</dd>
-								<dd><a href="#">睡袍</a></dd>
-								<dd class="separation">|</dd>
-								<dd><a href="#">靴子</a></dd>
-								<dd class="separation">|</dd>
-								<dd><a href="#">女式休闲格子衬衫</a></dd>
-								<dd class="separation">|</dd>
-								<dd><a href="#">情侣秋装</a></dd>
-								<dd class="separation">|</dd>
-							</dl>
+	                      	<h3 id="fwbzwrap_h3">服务承诺&amp;保障</h3>
+	                          <h4>服务承诺</h4>
+	                          <p>正品保证：多商网向您保证所售商品均为厂家正品</p>
+	                          <p class="fwbzla">包退包换：全网商品享受7天内无条件退换货</p>
+	                          <h4>货源保障</h4>
+	                          <p>多商网上的货源均为厂家直供，品牌质量，放心可靠。为保证产品与图片一致，网站展示图片均以产品实物拍摄。</p>
+	                          <p>多商网使用第三方担保交易，支付宝交易更安全。</p>
+	                          <h4>活动支持</h4>
+	                          <p>多商网为分销商提供免费的活动支持。丰富的活动产品，专业的活动支持人员为您提供最完善的活动支持。<a href="http://www.ecduo.cn/goods/cradle.html" target="_blank">立即报活动&gt;&gt;</a></p>
+	                          <h4>售后保障</h4>
+	                          <p>全网一件代发产品均享受七天无理由退换服务。有质量问题可直接联系客服提交退换货申请。</p>
+	                          <h5>退换货流程：</h5>
+	                          <img class="fwbzimgb" src="img/tuihuoliucheng.png" alt="服务保障">
+	                   	</div>
+	                   	<dl class="brand_dl">
+							<dt id="">相关标签:</dt>
+							<dd><a href="#">少女文胸</a></dd>
+							<dd class="separation">|</dd>
+							<dd><a href="#">方巾</a></dd>
+							<dd class="separation">|</dd>
+							<dd><a href="#">长袖T恤</a></dd>
+							<dd class="separation">|</dd>
+							<dd><a href="#>胸包</a></dd>
+							<dd class="separation">|</dd>
+							<dd><a href="#">男士钱包</a></dd>
+							<dd class="separation">|</dd>
+							<dd><a href="#">帆布包包</a></dd>
+							<dd class="separation">|</dd>
+							<dd><a href="#">睡袍</a></dd>
+							<dd class="separation">|</dd>
+							<dd><a href="#">靴子</a></dd>
+							<dd class="separation">|</dd>
+							<dd><a href="#">女式休闲格子衬衫</a></dd>
+							<dd class="separation">|</dd>
+							<dd><a href="#">情侣秋装</a></dd>
+							<dd class="separation">|</dd>
+						</dl>
 	                 	</div>
-					<div class="hb_picture" id="hb_picture" style="display:none">
-				        <div id="xiaz">
-						    <div class="mas"></div>
-					    </div>
-					</div>
-	                <div class="goods_list">
-	                    <span style="display: block;"><b class="u_arrow_right"></b></span>
-	                    <ol class="skus" style="display: block;">
-	                                                <li>
-	                            <span>分类：白色+卡其</span>
-	                            <span>尺码：L</span>
-	            <span class="fc_pa">货号 <input id="fuz_25473877" readonly="true" value="ED25473877">&nbsp;&nbsp;<input type="button" onclick="copyUrl2(25473877)" style="vertical-align: middle;outline: none;-webkit-appearance: none;border-radius: 0;
-	    border: none;background:#E0E0E0; width: 40px;" value="复制"></span>
-	                        </li>
-	                                                <li>
-	                            <span>分类：白色+卡其</span>
-	                            <span>尺码：M</span>
-	            <span class="fc_pa">货号 <input id="fuz_25473887" readonly="true" value="ED25473887">&nbsp;&nbsp;<input type="button" onclick="copyUrl2(25473887)" style="vertical-align: middle;outline: none;-webkit-appearance: none;border-radius: 0;
-	    border: none;background:#E0E0E0; width: 40px;" value="复制"></span>
-	                        </li>
-	                                                <li>
-	                            <span>分类：白色+卡其</span>
-	                            <span>尺码：S</span>
-	            <span class="fc_pa">货号 <input id="fuz_25473897" readonly="true" value="ED25473897">&nbsp;&nbsp;<input type="button" onclick="copyUrl2(25473897)" style="vertical-align: middle;outline: none;-webkit-appearance: none;border-radius: 0;
-	    border: none;background:#E0E0E0; width: 40px;" value="复制"></span>
-	                        </li>
-	                                                <li>
-	                            <span>分类：白色+卡其</span>
-	                            <span>尺码：XL</span>
-	            <span class="fc_pa">货号 <input id="fuz_25473907" readonly="true" value="ED25473907">&nbsp;&nbsp;<input type="button" onclick="copyUrl2(25473907)" style="vertical-align: middle;outline: none;-webkit-appearance: none;border-radius: 0;
-	    border: none;background:#E0E0E0; width: 40px;" value="复制"></span>
-	                        </li>
-	                                                <li>
-	                            <span>分类：白色+黑色</span>
-	                            <span>尺码：L</span>
-	            <span class="fc_pa">货号 <input id="fuz_25473917" readonly="true" value="ED25473917">&nbsp;&nbsp;<input type="button" onclick="copyUrl2(25473917)" style="vertical-align: middle;outline: none;-webkit-appearance: none;border-radius: 0;
-	    border: none;background:#E0E0E0; width: 40px;" value="复制"></span>
-	                        </li>
-	                                                <li>
-	                            <span>分类：白色+黑色</span>
-	                            <span>尺码：M</span>
-	            <span class="fc_pa">货号 <input id="fuz_25473927" readonly="true" value="ED25473927">&nbsp;&nbsp;<input type="button" onclick="copyUrl2(25473927)" style="vertical-align: middle;outline: none;-webkit-appearance: none;border-radius: 0;
-	    border: none;background:#E0E0E0; width: 40px;" value="复制"></span>
-	                        </li>
-	                                                <li>
-	                            <span>分类：白色+黑色</span>
-	                            <span>尺码：S</span>
-	            <span class="fc_pa">货号 <input id="fuz_25473937" readonly="true" value="ED25473937">&nbsp;&nbsp;<input type="button" onclick="copyUrl2(25473937)" style="vertical-align: middle;outline: none;-webkit-appearance: none;border-radius: 0;
-	    border: none;background:#E0E0E0; width: 40px;" value="复制"></span>
-	                        </li>
-	                                                <li>
-	                            <span>分类：白色+黑色</span>
-	                            <span>尺码：XL</span>
-	            <span class="fc_pa">货号 <input id="fuz_25473947" readonly="true" value="ED25473947">&nbsp;&nbsp;<input type="button" onclick="copyUrl2(25473947)" style="vertical-align: middle;outline: none;-webkit-appearance: none;border-radius: 0;
-	    border: none;background:#E0E0E0; width: 40px;" value="复制"></span>
-	                        </li>
-	                                                <li>
-	                            <span>分类：白色毛衣</span>
-	                            <span>尺码：均码</span>
-	            <span class="fc_pa">货号 <input id="fuz_26672717" readonly="true" value="ED26672717">&nbsp;&nbsp;<input type="button" onclick="copyUrl2(26672717)" style="vertical-align: middle;outline: none;-webkit-appearance: none;border-radius: 0;
-	    border: none;background:#E0E0E0; width: 40px;" value="复制"></span>
-	                        </li>
-	                                                <li>
-	                            <span>分类：卡其色裙子</span>
-	                            <span>尺码：S</span>
-	            <span class="fc_pa">货号 <input id="fuz_26672727" readonly="true" value="ED26672727">&nbsp;&nbsp;<input type="button" onclick="copyUrl2(26672727)" style="vertical-align: middle;outline: none;-webkit-appearance: none;border-radius: 0;
-	    border: none;background:#E0E0E0; width: 40px;" value="复制"></span>
-	                        </li>
-	                                                <li>
-	                            <span>分类：卡其色裙子</span>
-	                            <span>尺码：M</span>
-	            <span class="fc_pa">货号 <input id="fuz_26672737" readonly="true" value="ED26672737">&nbsp;&nbsp;<input type="button" onclick="copyUrl2(26672737)" style="vertical-align: middle;outline: none;-webkit-appearance: none;border-radius: 0;
-	    border: none;background:#E0E0E0; width: 40px;" value="复制"></span>
-	                        </li>
-	                                                <li>
-	                            <span>分类：卡其色裙子</span>
-	                            <span>尺码：L</span>
-	            <span class="fc_pa">货号 <input id="fuz_26672747" readonly="true" value="ED26672747">&nbsp;&nbsp;<input type="button" onclick="copyUrl2(26672747)" style="vertical-align: middle;outline: none;-webkit-appearance: none;border-radius: 0;
-	    border: none;background:#E0E0E0; width: 40px;" value="复制"></span>
-	                        </li>
-	                                                <li>
-	                            <span>分类：卡其色裙子</span>
-	                            <span>尺码：XL</span>
-	            <span class="fc_pa">货号 <input id="fuz_26672757" readonly="true" value="ED26672757">&nbsp;&nbsp;<input type="button" onclick="copyUrl2(26672757)" style="vertical-align: middle;outline: none;-webkit-appearance: none;border-radius: 0;
-	    border: none;background:#E0E0E0; width: 40px;" value="复制"></span>
-	                        </li>
-	                                                <li>
-	                            <span>分类：黑色裙子</span>
-	                            <span>尺码：XL</span>
-	            <span class="fc_pa">货号 <input id="fuz_26672767" readonly="true" value="ED26672767">&nbsp;&nbsp;<input type="button" onclick="copyUrl2(26672767)" style="vertical-align: middle;outline: none;-webkit-appearance: none;border-radius: 0;
-	    border: none;background:#E0E0E0; width: 40px;" value="复制"></span>
-	                        </li>
-	                                                <li>
-	                            <span>分类：黑色裙子</span>
-	                            <span>尺码：L</span>
-	            <span class="fc_pa">货号 <input id="fuz_26672777" readonly="true" value="ED26672777">&nbsp;&nbsp;<input type="button" onclick="copyUrl2(26672777)" style="vertical-align: middle;outline: none;-webkit-appearance: none;border-radius: 0;
-	    border: none;background:#E0E0E0; width: 40px;" value="复制"></span>
-	                        </li>
-	                                                <li>
-	                            <span>分类：黑色裙子</span>
-	                            <span>尺码：M</span>
-	            <span class="fc_pa">货号 <input id="fuz_26672787" readonly="true" value="ED26672787">&nbsp;&nbsp;<input type="button" onclick="copyUrl2(26672787)" style="vertical-align: middle;outline: none;-webkit-appearance: none;border-radius: 0;
-	    border: none;background:#E0E0E0; width: 40px;" value="复制"></span>
-	                        </li>
-	                                                <li>
-	                            <span>分类：黑色裙子</span>
-	                            <span>尺码：S</span>
-	            <span class="fc_pa">货号 <input id="fuz_26672797" readonly="true" value="ED26672797">&nbsp;&nbsp;<input type="button" onclick="copyUrl2(26672797)" style="vertical-align: middle;outline: none;-webkit-appearance: none;border-radius: 0;
-	    border: none;background:#E0E0E0; width: 40px;" value="复制"></span>
-	                        </li>
-	                                            </ol>
-	                </div>
-						
-	            </div>
-	        </div>
-	    </div>
-	</div>
-
+						<div class="hb_picture" id="hb_picture" style="display:none">
+				        	<div id="xiaz">
+						    	<div class="mas"></div>
+					    	</div>
+						</div>
+	                	<div class="goods_list">
+	                    	<span style="display: block;"><b class="u_arrow_right"></b></span>
+	                		<ol class="skus" style="display: block;">
+			                	<li>
+		                            <span>分类：白色+卡其</span>
+		                            <span>尺码：L</span>
+						            <span class="fc_pa">货号 
+						            	<input id="fuz_25473877" readonly="true" class="btn1" value="ED25473877">&nbsp;&nbsp;
+						            	<input type="button" onclick="copyUrl2(25473877)" class="btn2" value="复制">
+						            </span>
+		                        </li>
+		                        <li>
+		                            <span>分类：白色+卡其</span>
+		                            <span>尺码：M</span>
+						            <span class="fc_pa">货号 
+						            	<input id="fuz_25473887" readonly="true" class="btn1" value="ED25473887">&nbsp;&nbsp;
+						            	<input type="button" onclick="copyUrl2(25473887)" class="btn2" value="复制">
+						            </span>
+		                        </li>
+		                        <li>
+		                            <span>分类：白色+卡其</span>
+		                            <span>尺码：S</span>
+						            <span class="fc_pa">货号 
+						            	<input id="fuz_25473897" readonly="true" class="btn1" value="ED25473897">&nbsp;&nbsp;
+						            	<input type="button" onclick="copyUrl2(25473897)" class="btn2" value="复制">
+						            </span>
+		                        </li>
+		                        <li>
+		                            <span>分类：白色+卡其</span>
+		                            <span>尺码：XL</span>
+						            <span class="fc_pa">货号 
+						            	<input id="fuz_25473907" readonly="true" class="btn1" value="ED25473907">&nbsp;&nbsp;
+						            	<input type="button" onclick="copyUrl2(25473907)" class="btn2" value="复制">
+						            </span>
+		                        </li>
+                                <li>
+		                            <span>分类：白色+黑色</span>
+		                            <span>尺码：L</span>
+						            <span class="fc_pa">货号 
+						            	<input id="fuz_25473917" readonly="true" class="btn1" value="ED25473917">&nbsp;&nbsp;
+						            	<input type="button" onclick="copyUrl2(25473917)" class="btn2" value="复制">
+						            </span>
+                        		</li>
+                      		 	<li>
+		                            <span>分类：白色+黑色</span>
+		                            <span>尺码：M</span>
+						            <span class="fc_pa">货号 
+						            	<input id="fuz_25473927" readonly="true" class="btn1" value="ED25473927">&nbsp;&nbsp;
+						            	<input type="button" onclick="copyUrl2(25473927)" class="btn2" value="复制">
+						            </span>
+				                </li>
+				                <li>
+		                            <span>分类：白色+黑色</span>
+		                            <span>尺码：S</span>
+						            <span class="fc_pa">货号 
+						            	<input id="fuz_25473937" readonly="true" class="btn1" value="ED25473937">&nbsp;&nbsp;
+						            	<input type="button" onclick="copyUrl2(25473937)" class="btn2" value="复制">
+						            </span>
+		                        </li>
+		                        <li>
+		                            <span>分类：白色+黑色</span>
+		                            <span>尺码：XL</span>
+						            <span class="fc_pa">货号 
+						            	<input id="fuz_25473947" readonly="true" class="btn1" value="ED25473947">&nbsp;&nbsp;
+						            	<input type="button" onclick="copyUrl2(25473947)" class="btn2" value="复制">
+						            </span>
+		                        </li>
+		                        <li>
+		                            <span>分类：白色毛衣</span>
+		                            <span>尺码：均码</span>
+						            <span class="fc_pa">货号 
+						            	<input id="fuz_26672717" readonly="true" class="btn1" value="ED26672717">&nbsp;&nbsp;
+						            	<input type="button" onclick="copyUrl2(26672717)" class="btn2" value="复制">
+						            </span>
+		                        </li>
+		                        <li>
+		                            <span>分类：卡其色裙子</span>
+		                            <span>尺码：S</span>
+						            <span class="fc_pa">货号 
+						            	<input id="fuz_26672727" readonly="true" class="btn1" value="ED26672727">&nbsp;&nbsp;
+						            	<input type="button" onclick="copyUrl2(26672727)" class="btn2" value="复制">
+						            </span>
+		                        </li>
+		                        <li>
+		                            <span>分类：卡其色裙子</span>
+		                            <span>尺码：M</span>
+						            <span class="fc_pa">货号 
+						            	<input id="fuz_26672737" readonly="true" class="btn1" value="ED26672737">&nbsp;&nbsp;
+						            	<input type="button" onclick="copyUrl2(26672737)" class="btn2" value="复制">
+						            </span>
+		                        </li>
+		                        <li>
+		                            <span>分类：卡其色裙子</span>
+		                            <span>尺码：L</span>
+						            <span class="fc_pa">货号 
+						            	<input id="fuz_26672747" readonly="true" class="btn1" value="ED26672747">&nbsp;&nbsp;
+						            	<input type="button" onclick="copyUrl2(26672747)" class="btn2" value="复制">
+						            </span>
+		                        </li>
+		                        <li>
+		                            <span>分类：卡其色裙子</span>
+		                            <span>尺码：XL</span>
+						            <span class="fc_pa">货号 
+						            	<input id="fuz_26672757" readonly="true" class="btn1" value="ED26672757">&nbsp;&nbsp;
+						            	<input type="button" onclick="copyUrl2(26672757)" class="btn2" value="复制">
+						            </span>
+		                        </li>
+		                        <li>
+		                            <span>分类：黑色裙子</span>
+		                            <span>尺码：XL</span>
+						            <span class="fc_pa">货号 
+						            	<input id="fuz_26672767" readonly="true" class="btn1" value="ED26672767">&nbsp;&nbsp;
+						            	<input type="button" onclick="copyUrl2(26672767)" class="btn2" value="复制">
+						            </span>
+		                        </li>
+		                        <li>
+		                            <span>分类：黑色裙子</span>
+		                            <span>尺码：L</span>
+						            <span class="fc_pa">货号 
+						            	<input id="fuz_26672777" readonly="true" class="btn1" value="ED26672777">&nbsp;&nbsp;
+						            	<input type="button" onclick="copyUrl2(26672777)" class="btn2" value="复制">
+						            </span>
+		                        </li>
+		                        <li>
+		                            <span>分类：黑色裙子</span>
+		                            <span>尺码：M</span>
+						            <span class="fc_pa">货号 
+						            	<input id="fuz_26672787" readonly="true" class="btn1" value="ED26672787">&nbsp;&nbsp;
+						            	<input type="button" onclick="copyUrl2(26672787)" class="btn2" value="复制">
+						            </span>
+		                        </li>
+		                        <li>
+		                            <span>分类：黑色裙子</span>
+		                            <span>尺码：S</span>
+						            <span class="fc_pa">货号 
+						            	<input id="fuz_26672797" readonly="true" class="btn1" value="ED26672797">&nbsp;&nbsp;
+						            	<input type="button" onclick="copyUrl2(26672797)" class="btn2" value="复制">
+						            </span>
+		        				</li>
+		 	 				</ol>
+			            </div>
+			        </div>
+			    </div>
+			</div>
 
 	<div id="tuicontainer" class="clearfix"></div>
-
-	<style>
-	     
-	</style>
 	<div class="party">
 	    <div class="party_box">
 	        <a class="close"></a>
@@ -1905,12 +1932,12 @@
 				<a href="javaScript:void(0)" class="liuyan"></a>
 				<span class="close"></span>
 			</div>
-			<div class="open"></div>
-		        <div class="qq_cart J-shoping"><a class="img_a" href="javascript:;#"><span>上架篮</span><b class="baseBg J-shoping-num">0</b></a>
+			<div  style="display:none" class="open"></div>
+		        <div  style="display:none" class="qq_cart J-shoping"><a class="img_a" href="javascript:;#"><span>上架篮</span><b class="baseBg J-shoping-num">0</b></a>
 	      </div>
 	      		 <div class="qq_top"><a href="javascript:;#header_layout_name" class="top"><span></span></a></div>
 		</div>
-		<div class="tanchuang">
+		<div class="tanchuang"  style="display:none">
 	  <h3>联系客服<span class="close_end">关闭</span></h3>
 	  <form action="javascript:;#" method="get" class="ly_content">
 	    <input type="text" value="订单问题" class="txt_input txt_click" readonly="readonly" item="0">
