@@ -55,3 +55,33 @@ margin: 0 5px; }
 .partner ul li a:hover { color: #000; margin-right: 8px; }
 .partner ul li a:visited { color: #000; margin-right: 8px; }
 .partner ul li#bottom_2_title { width: 56px; font-weight: bold; }
+
+/*在线留言弹窗*/
+.mengban{display: none;width:100%;height:100%;background:#000;position: fixed;top:0px;left:0px;z-index:99999;opacity: 0.3;filter:alpha(opacity=30)}
+.tanchuang{display: none;width:588px;height:319px;position: fixed;top:50%;left:50%;margin-left:-294px;margin-top:-160px;background: #fff;z-index:9999999;}
+.tanchuang h3{font-size:14px;color:#fff;height:42px;line-height: 42px;width:540px;padding:0 24px;text-align: left;background: #f00}
+.tanchuang h3 span{float: left;font-size: 12px;margin-top:-5px;}
+.tanchuang .ly_content{width:540px;height:233px;padding:24px 24px 20px 24px;}
+.tanchuang .ly_content .txt_input{cursor: pointer;border:1px solid #dfdfdf;width:75px;height:30px;line-height: 30px;text-align: center;float: left;margin-right:6px;color:#7c7c7c;}
+.tanchuang .ly_content .txt_click{border-color:#d71e00;background:url(../img/click.jpg) no-repeat center center;color:#d71e00;}
+.tanchuang .ly_content textarea{resize: none;width:539px;height:143px;margin-top:8px;color:#b5b5b7;}
+.tanchuang .ly_content .btn_input{width:100px;height:25px;line-height: 25px;text-align: center;background: #f00;border:none;margin:22px auto 0;display: block;color:#fff;cursor: pointer;}
+.close_end {position: absolute;right: 10px;top: 6px;color: #FFF;cursor: pointer;z-index: 2;}
+
+/*回到顶部*/
+#kefu .qq_top{width:60px;height:54px;position:absolute;bottom:-150px;right:0px; margin-top:45px; background:url(../img/edo_ico_44.png) no-repeat left top;text-align:center;}
+#kefu .qq_top a{width:60px;height:54px;display:inline-block;float:left;}
+#kefu .qq_top a span{padding-top:30px; display:inline-block;}
+#kefu  div.qqtopbg{background:url(../img/edo_ico_48.png) no-repeat left top;}
+#kefu  div.qqtopbg a.top{color:#fff;}
+#kefu .kefu .qqimgbg .firtop{border-bottom: 0px solid #E2E2E2; }
+#kefu .kefu .qqimgbg .service-block{ padding:0px 0 0px 0px;width:202px;}
+#kefu .kefu .qqimgbg .service-block span{width:100px;display: inline-block; float:left;}
+#kefu .kefu .qqimgbg .service-block b{width:92px;height:22px;display: inline-block;}
+#kefu .kefu .qqimgbg h4{color: #333333; font-size: 12px; font-weight: 700; margin-bottom: 0px;}
+#kefu .kefu .qqimgbg .wws li{height: 20px; line-height: 20px; position: relative;display:inline;}
+#kefu .kefu .qqimgbg .service-content{display:inline-block;padding:0px;}
+#kefu .kefu .qqimgbg .wbtn li{line-height:}
+#kefu .kefu .qqimgbg .service-content li{margin-bottom: 5px;}
+#kefu .kefu .qqimgbg .date{margin-right: 14px;}
+#kefu .kefu .qqimgbg span{color: #333333;}

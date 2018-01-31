@@ -6,14 +6,56 @@ function $id(id){
 		//存cookie
 			var uname = $(".title").val();
 			var upwd = $(".txt").val();
-			var d = new Date();
-			d.setDate( d.getDate() + 1 );
-			document.cookie = "username" + uname +","+ upwd ;";expires="+d;
-				alert("注册成功");
+			// var str = document.cookie;
+			// var arr = str.split(";");
+			// for( var i = 0 ; i < arr.length ; i++ ){
+			// 	var item = arr[i].split("=");
+			// 	// console.log(item[0])
+	 	// 		if( uname == item[0] ){
+	 	// 			// console.log(item[0])
+			// 		$(".elm").html("用户名重复!")
+			// 		 .addClass("varify-false")
+			// 		 .removeClass("varify-true")
+			// 		 return
+	 	// 		}
+			// }	
+			document.cookie =  uname  + "=" + upwd ;
+			alert("注册成功");
+			$("form:first()").css("display","none")
+			$("form:eq(1)").css("display","block")
+			$("form b").css("display","none")
 		}else{
-			alert("eqw")
+			alert("请补全信息!")
 		}
 	})
+
+	// $(".next-btn").click(function(){
+	// 	if( flagMail && falgPw && falgRadom && hobby() ){
+	// 	//存cookie
+	// 		var uname = $(".title").val();
+	// 		var upwd = $(".txt").val();
+	// 		// var str = document.cookie;
+	// 		// var arr = str.split(";");
+	// 		// for( var i = 0 ; i < arr.length ; i++ ){
+	// 		// 	var item = arr[i].split("=");
+	// 		// 	// console.log(item[0])
+	//  	// 		if( uname == item[0] ){
+	//  	// 			// console.log(item[0])
+	// 		// 		$(".elm").html("用户名重复!")
+	// 		// 		 .addClass("varify-false")
+	// 		// 		 .removeClass("varify-true")
+	// 		// 		 return
+	//  	// 		}
+	// 		// }	
+	// 		document.cookie =  uname  + "=" + upwd ;
+	// 		alert("注册成功");
+	// 		$("form:first()").css("display","none")
+	// 		$("form:eq(1)").css("display","block")
+	// 		$("form b").css("display","none")
+	// 	}else{
+	// 		alert("请补全信息!")
+	// 	}
+	// })
 	// $("login").onclick = function(){
 	// 	//取出cookie
 	// 	var str = document.cookie;
@@ -43,7 +85,6 @@ function $id(id){
 	$(".title").blur(function(){
 		var reg = /^1[34578]\d{9}$/;
 		var res = $(".title").val()
-		console.log(res)
 		if( reg.test(res) ){
 			$(".elm").html("通过验证!")
 					 .addClass("varify-true")
@@ -74,7 +115,6 @@ function $id(id){
 			falgPw = false
 		}
 	})
-
 
 	var falgRadom = null;
 	//随机验证码
@@ -107,22 +147,29 @@ function $id(id){
 
 			return true
 		}
-		console.log($(this))
 	})
 
+	//选中.
 	function hobby(){
 		if( $id("chec").checked ){
 			return true
 		}
 	}
 
+	//用户名
+	var falgName = null;
+	$(".name").blur(functon(){
+		var reg = //;
+
+	})
+
 !(function(window, document) {
 	function GVerify(options) { //创建一个图形验证码对象，接收options对象为参数
 		this.options = { //默认options参数值
 			id: "", //容器Id
 			canvasId: "verifyCanvas", //canvas的ID
-			width: "100", //默认canvas宽度
-			height: "30", //默认canvas高度
+			width: "133", //默认canvas宽度
+			height: "32", //默认canvas高度
 			type: "blend", //图形验证码默认类型blend:数字字母混合类型、number:纯数字、letter:纯字母
 			code: ""
 		}
@@ -228,7 +275,6 @@ function $id(id){
 		validate: function(code){
 			var code = code.toLowerCase();
 			var v_code = this.options.code.toLowerCase();
-			console.log(v_code);
 			if(code == v_code){
 				return true;
 			}else{
@@ -255,8 +301,23 @@ function $id(id){
 	}
 	window.GVerify = GVerify;
 })(window, document);
-var verifyCode = new GVerify("v_container");
-
+var verifyCode = new GVerify({
+			id: "v_container", //容器Id
+			canvasId: "verifyCanvas", //canvas的ID
+			width: "133", //默认canvas宽度
+			height: "33", //默认canvas高度
+			type: "blend", //图形验证码默认类型blend:数字字母混合类型、number:纯数字、letter:纯字母
+			code: ""
+		});
+var verifyCod = new GVerify({
+			id: "v_container2", //容器Id
+			canvasId: "verifyCanvas2", //canvas的ID
+			width: "133", //默认canvas宽度
+			height: "33", //默认canvas高度
+			type: "blend", //图形验证码默认类型blend:数字字母混合类型、number:纯数字、letter:纯字母
+			code: ""
+		});
+console.log(verifyCod)
 
 	// $(".txt").type="tetx"
 	// $( s.el ).bind( s.ev, function() {

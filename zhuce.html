@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="css/public.css">
 <link rel="stylesheet" href="foot/iconfont.css">
 <script src="js/jquery-1.11.1.min.js"></script>
-<body>
+<body onselectstart="return false" style="-moz-user-select:none;">
 	<div id="top">
 		<div class="top-login">
 			<div class="left">
@@ -24,7 +24,6 @@
                 <li><a href="#" title="多商App下载">多商App</a></li>
                 <li><a href="#" title="多商Wap">手机多商</a></li> 
 				<li><a href="#">帮助中心</a></li>
-
 			</ul>
 		</div>
 	</div>          
@@ -33,7 +32,7 @@
 	</div>
 <!--***********************content************************-->
 		
-    <div class="login">
+    <div class="login" >
     	<div class="login-con">
             <ul id="proTitle" class="tab_panel">
                 <li class="on"><i>1</i>使用邮箱/手机注册</li>
@@ -61,18 +60,74 @@
 				<div id="v_container" style="float:left;"></div>
 				<b class="spn"></b>
 			</div>
-		        <div>
-					<i class="tcp">
-				     	<input type="checkbox" id="chec"><label for="Check">已阅读并同意</label>
-				    	<a href="#">《多商分销系统用户服务协议》</a>
-					    <span class="che"></span>
-					</i>       
-		        </div>
-		        <div >						         
-					<a class="next-btn" href="javascript:void(0);">立即注册，领取淘宝课程券</a>
-				</div>
-		</form>     
+	        <div>
+				<i class="tcp">
+			     	<input type="checkbox" id="chec"><label for="Check">已阅读并同意</label>
+			    	<a href="#">《多商分销系统用户服务协议》</a>
+				    <span class="che"></span>
+				</i>       
+	        </div>
+	        <div >						         
+				<a class="next-btn" href="javascript:void(0);">立即注册，领取淘宝课程券</a>
+			</div>
+		</form>
+		<form style="display:none">
+			<div>
+  				<span>用户名： </span>
+				<input class="name" type="text">
+				<b class="elm"></b>
+  			</div>
+	 	 	<div>
+      			<span >手机： </span>
+				<input class="txt" type="password">
+				<a class="parent-eye" href="javascript:;">
+				<i class="eye"></i>
+				</a>
+  				<b class="pw"></b>
+  			</div>
+		    <div>
+		    	<span style="float:left">验证码：</span>
+		    	<input style="float:left" type="text" id="code_input" value="" placeholder="请输入验证码"/>
+				<div id="v_container2" style="float:left;width:131px;height:33px;"></div>
+				<b class="spn"></b>
+			</div>
+			<div class="ifo" style="height:120px">
+	      		<span class="title">用户身份：</span>
+	      		请选择您的身份（可多选）
+	      		<div style="padding-left:100px;height: 100px">
+		      		<i class="tcp" style="height:10px;display:block;">
+		      			<input type="checkbox" value="1" class="">
+		      			<label>我是淘宝店主</label>
+		      		</i><br>
+		      		<i class="tcp" style="height:10px;display:block;">
+		      			<input type="checkbox" value="2" class="">
+		      			<label>我想开微店</label>
+		      		</i><br>
+		      		<i class="tcp" style="height:10px;display:block;">
+		      			<input type="checkbox" value="3" class="" datatype="*" nullmsg="请选择您的身份">
+		      			<label>我是线下专营店主</label>
+		      		</i>
+	      		</div>
+		    </div> 
+      
+	       <div class="ifo">
+      			<span class="title">网店：</span>
+				<input type="text" id="web" placeholder=" 填写网店地址，免费网店诊断" name="web" class="text ">
+		      	<span class="Validform_checktip"></span>
+		    </div>
+		     	<div class="ifo">
+	      			<span class="title">邀请码：</span>
+					<input type="text" id="invite_code" placeholder="没有请留空" class="text ">	
+		      		<span class="Validform_checktip"></span>
+		      	</div>
+	       		<input type="hidden" value="dh13071188772" name="password">
+	       		<input type="hidden" value="341201" name="verify_id">
+	       		<div class="next-btn">						         
+					<a class="next-btn2" href="javascript:void(0);">完成注册，领取淘宝课程券</a>
+			   </div>
+	    </form>
 	</div>
+
 <!--******************************footer**********************************-->
 	<div id="footer">
 	  	<div class="help">
