@@ -2797,177 +2797,33 @@
 				</div>	 
 		    </div>
 		</div>
-			<div id="kefu">
-		<div class="kefu">
-			<a href="http://crm2.qq.com/page/portalpage/wpa.php?uin=4006163518&aty=1&a=0&curl=&ty=1" class='qq' target="_blank"></a>
-			<a href="http://wpa.qq.com/msgrd?v=3&uin=2086370231&site=qq&menu=yes" class='qq' target="_blank"></a>
-			<a href="http://wpa.qq.com/msgrd?v=3&uin=3318851995&site=qq&menu=yes" class='qq' target="_blank"></a>
-			<a href="javaScript:void(0)" class="liuyan"></a>
-			<span class="close"></span>
+		<div id="kefu">
+			<div class="kefu">
+				<a href="#" class='qq' target="_blank"></a>
+				<a href="#" class='qq' target="_blank"></a>
+				<a href="#" class='qq' target="_blank"></a>
+				<a href="javaScript:void(0)" class="liuyan"></a>
+				<span class="close"></span>
+			</div>
+			<div class="open"></div>
+			<div class="qq_top"><a href="#header_layout_name" class="top"><span></span></a></div>
 		</div>
-		<div class="open"></div>
-        
-		 <div class="qq_top"><a href="#header_layout_name" class="top"><span></span></a></div>
-	</div>
-	<div class="tanchuang">
-  <h3>联系客服<span class="close_end">关闭</span></h3>
-  <form action="#" method="get" class="ly_content">
-    <input type="text" value="订单问题" class="txt_input txt_click" readonly="readonly" item="0" />
-    <input type="text" value="投诉建议" class="txt_input" readonly="readonly" item="1" />
-    <input type="text" value="代销咨询" class="txt_input" readonly="readonly" item="2"/>
-    <input type="text" value="批发咨询" class="txt_input" readonly="readonly" item="3"/>
-    <textarea class="area" style="color:#666; padding-left: 5px;" placeholder="提交留言后，请在会员中心-我的留言处，查看留言反馈！" maxlength="200"></textarea>
-    <input type="button" value="提交留言" class="btn_input" id = "btn_input"/>
-    <input type="hidden" id="user_email" value="0">
-    <input type="hidden" id="user_phone" value="0">
-    <input type="hidden" id="user_info" value="0"/>  
-  </form>
-</div>
-	
-<script>
-	//上架篮	
-	$(function(){
-	$('.img_a').click(function () {
-	    $.getJSON('/index.php?app=f_member&act=has_login', function(user){
-	        if (user==null || user=='') {
-	        	show_login_box();
-	        	
-	        } else {
-	        	
-	        	window.location.href = '/fenxiao_home/index.php?app=shop_cart';
-	            
-	        }
-	    });
-	});
-});
-		
-		$(function() {
-			$('#kefu .close').click(function(){
-				$('#kefu .kefu').animate({"width":0},500,function(){
-					$('#kefu .open').animate({width:42},200);
-				})
-			})
-
-			$('#kefu .open').click(function(){
-				$('#kefu .open').animate({"width":0},200,function(){
-					$('#kefu .kefu').animate({'width':210});
-				})
-				
-			})
-		});
-		//在线留言弹窗
-	$(".liuyan").click(
-	  function(){
-	    $(".mengban").show();
-	    $(".tanchuang").show();
-	    $.get('/new_index.php?app=channel&act=get_user_info_ajax',function(data){
-	    	if(data.status == 200) {
-	    		$("#user_info").val(1);
-	    		if(data.data.email != '') {
-	    			$("#user_email").val(1);
-	    		} else {
-	    			$("#user_email").val(0);
-	    		}
-	    		if(data.data.phone_mob != '') {
-	    			$("#user_phone").val(1);
-	    		} else {
-	    			$("#user_phone").val(0);
-	    		}
-	    	} else {
-	    		$("#user_info").val(0);
-	    		$("#user_email").val(0);
-	    		$("#user_phone").val(0);
-	    	}
-	    	//console.log(data);
-	    });
-	  }
-	);
-
-$('.btn_input').click(function(){
-	   var type = $(".txt_click").attr('item');
-	   var content = $(".area").val();
-	   var len = content.length;
-	   
-	   var user_info = $("#user_info").val();
-	   var email = $("#user_email").val();
-	   var phone = $("#user_phone").val();
-	   
-	   if(user_info == 0) {
-		   alert("请登录后再留言");
-	       window.location.href = '/login/';
-	       return;
-	   }
-	   
-   	   if(user_phone==0){
-		  alert("请绑定手机号码");
-		  return;
-   	   }
-   	   if(user_email==0){
-		  alert("请绑定电子邮箱");
-		  return;
-	   }
-	   if(len > 200){
-			alert("不能超过200个字数");
-			return;
-	   }
-	   if(len <1) {
-		   alert("留言不能为空");
-		   $(".area").focus();
-		   return;
-	   }
-	   if(len < 10){
-		   alert("留言不能低于10个字");
-		   //$(".area").focus();
-		   return;
-	   }
-  	  
-	   $.post('/new_index.php?route=buyer&app=comment&act=add', {'type':type, 'content': content, 'phone':phone, 'email':email, 'sub':0}, function(data){
-	    	if(data.status == 200){
-	    		alert(data.msg);
- 			window.location.href=window.location.href;
-				return;
-	    	}else{
-	    		alert(data.msg);
-	    		return;
-	    	}
-	   },'json')
-});
-
-
-
-
-
-$(".area").bind('focus',function(){
-	 $(".area").val("");
-});
-$(".txt_input").click(
-  function(){
-    $(this).addClass("txt_click").siblings(".txt_input").removeClass("txt_click")
-    //$(this).attr('item','item').siblings(".txt_input").removeAttr('item');
-  }
-);
-
-//返回顶部
-$(".qq_top").hover(
-	function(){
-        $(this).addClass("qqtopbg");
-	},
-	function(){
-        $(this).removeClass("qqtopbg");
-	}
-);
-$('.top').click(function(){$('html,body').animate({scrollTop: '0px'}, 300);return false;});
-
-//隐藏在线留言弹窗
-$(".close_end").click(
-  function(){
-    $(".mengban").hide();
-    $(".tanchuang").hide();
-  }
-);
-</script>
-
+		<div class="tanchuang">
+		  	<h3>联系客服<span class="close_end">关闭</span></h3>
+		  	<form action="#" method="get" class="ly_content">
+			    <input type="text" value="订单问题" class="txt_input txt_click" readonly="readonly" item="0" />
+			    <input type="text" value="投诉建议" class="txt_input" readonly="readonly" item="1" />
+			    <input type="text" value="代销咨询" class="txt_input" readonly="readonly" item="2"/>
+			    <input type="text" value="批发咨询" class="txt_input" readonly="readonly" item="3"/>
+			    <textarea class="area" style="color:#666; padding-left: 5px;" placeholder="提交留言后，请在会员中心-我的留言处，查看留言反馈！" maxlength="200"></textarea>
+			    <input type="button" value="提交留言" class="btn_input" id = "btn_input"/>
+			    <input type="hidden" id="user_email" value="0">
+			    <input type="hidden" id="user_phone" value="0">
+			    <input type="hidden" id="user_info" value="0"/>  
+		  	</form>
+		</div>	
 </body>
 </html>
 <script src="js/index.js"></script>
+<script src="js/kefu.js"></script>
 

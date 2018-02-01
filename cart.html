@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>购物车</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+<div class="ds_top">
+    <div class="top_box">
+        <div class="f_left" id="head_login_span">
+            <span>Hi,欢迎来到多商网</span>
+            <a class="same" href="login.html">请登录</a>
+            <a class="same" href="zhuce.html">免费注册</a>
+        </div>
+        <div class="f_right">
+            <a href="javascript:;" class="same">多商首页</a>
+            <div class="same myself">我的多商<i></i>
+                <ul>
+                    <li><a href="javascript:;">分销商</a></li>
+                    <li><a href="javascript:;">等待付款</a></li>
+                    <li><a href="javascript:;">等待发货</a></li>
+                </ul>
+            </div>
+            <div class="buy same">
+                <img src="img/dsImg_13.jpg" class="buy_img">购物车(<span class="carnum">0</span>)<i></i>
+                <ul>
+                    <p class="hy">您最近加入的货品，快来看一看吧</p>
+                    <div class="totlePrice">
+                        共 <span class="pro_type"></span> 款 <span class="pro_totalnum"></span> 件
+                    </div>
+                    <a class="buyNow" href="javascript:;">马上结账</a>
+                </ul>
+            </div>
+            <div class="collect same">收藏夹<i></i>
+                <ul>
+                    <li><a href="javascript:;">收藏的商品</a></li>
+                </ul>
+            </div>
+            <div class="same kf">在线客服<i></i>
+                <ul>
+                    <li class="liuyan"><a href="javaScript:void(0)" class="liuyan">活动咨询</a></li>
+                    <li><a href="javascript:;" class='qq' target="_blank">售后咨询</a></li>
+                    <li><a href="javascript:;" class='qq' target="_blank">联系客服</a></li>
+                    <li><a href="javascript:;" class='qq' target="_blank">建议反馈</a></li>
+                    <li><a>微信客服</a></li>
+                </ul>
+            </div>
+            <div class="wap same">手机逛多商<i></i>
+                <ul>
+                    <li><img src="img/downapp.jpg"> <span>下载APP</span></li>
+                    <li><img src="img/gongzhong.jpg"><span>关注公众号</span></li>
+                </ul>
+            </div>
+            <a class="enter same" href="javascript:;" target="_blank">供应商入驻</a>
+        </div>
+    </div>
+    <div class="top_box2">
+        <div class="search_box">
+            <p><a>买家中心</a></p>
+            <div class="box">
+                <input  class="input search-keyword" name="q" id="q_keyword" autocomplete="off" value="" onkeypress="enterPress(event);" placeholder="周二新品火爆上新中！周四特价季来啦！">
+                <a class="search" href="javascript:search();">搜索</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tanchuang" style="display:none;">
+    <h3>联系客服<span class="close_end">关闭</span></h3>
+    <form action="#" method="get" class="ly_content">
+      <input type="text" value="订单问题" class="txt_input txt_click" readonly="readonly" item="0" />
+      <input type="text" value="投诉建议" class="txt_input" readonly="readonly" item="1" />
+      <input type="text" value="代销咨询" class="txt_input" readonly="readonly" item="2"/>
+      <input type="text" value="批发咨询" class="txt_input" readonly="readonly" item="3"/>
+      <textarea class="area" style="color:#666; padding-left: 5px;" placeholder="提交留言后，请在会员中心-我的留言处，查看留言反馈！" maxlength="200"></textarea>
+      <input type="button" value="提交留言" class="btn_input" id = "btn_input"/>
+      <input type="hidden" id="user_email" value="0">
+      <input type="hidden" id="user_phone" value="0">
+      <input type="hidden" id="user_info" value="0"/>  
+    </form>
+</div>    
+<style>
+.storeBox .d2_w div{width: 330px;margin:0 auto;}
+.storeBox .d2_w div table{width: 330px;margin:0 auto;}
+</style>
+		<div class="ds_container">
+           <div class="myFreightcar">
+           	 <div class="navigation">
+           	 	<span>您的位置：</span>
+           	 	<span><a>多商网首页</a></span>
+           	 	<span class="list">我的多商
+                        <ul class="ulOne">
+                                <li><a href="/buyer/?app=orders" >交易订单</a>  >
+                                    <ul>
+                                        <li><a href="javascript:;">我的订单</a></li>
+                                        <li><a href="javascript:;">合并订单</a></li>
+                                        <li><a href="javascript:;">淘宝下单</a></li>
+                                        <li><a href="javascript:;">拼多多下单</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="javascript:;">进货管理</a>  >
+                                    <ul>
+                                        <li><a href="javascript:;">我的收藏</a></li>
+                                        <li><a href="javascript:;">我的进货车</a></li>
+                                        <li><a href="javascript:;">我上架的商品</a></li>
+                                    </ul>
+                                </li>
+                                <li> <a href="javascript:;">活动管理</a>  >
+                                    <ul>
+                                        <li><a href="javascript:;">活动转介绍</a></li>
+                                    </ul>
+                                </li>
+                                <li> <a href="javascript:;">应用市场</a>  >
+                                    <ul>
+                                        <li><a href="javascript:;">美工机器人</a></li>
+                                    </ul>
+                                </li>
+                                <li> <a href="javascript:;">账号管理</a>  >
+                                    <ul>
+                                        <li><a href="javascript:;">个人资料</a></li>
+                                        <li><a href="javascript:;">收货地址</a></li>
+                                        <li><a href="javascript:;">消息提醒</a></li>
+                                        <li><a href="javascript:;">反馈建议</a></li>
+                                        <li><a href="javascript:;">安全设置</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            					
+           	 	</span>
+           	 	<span>我的进货车</span>
+			</div>
+            <div class="noGoods" style="display:block;">
+           	 	<img src="img/dsImg_64.jpg">
+           	 	<p>您的进货车还没有货品！</p>
+           	 	<p>现在<a href="/">去逛逛</a>~</p>
+			</div>
+	        <div class="lately">
+             	<div class="messageTop">
+		    		<div class="messageNav">
+					<div class="color systemInfo lateOne">最近浏览</div>
+		    		<div class="orderInfo lateTwo">最近收藏</div>
+		    		</div>		    		
+		    	    <i class="hk" style="left: 26px;"></i>
+			    </div>			
+				<div class="box one" style="display:block">
+				    <ul class="latelyLook" >
+                        <li>
+					    	<a href=""javascript:;"><img src="img/59b9f3dd9f6b8.jpg" height="270px"></a>
+					    	<p class="title">8130#实拍2017秋冬圆领宽松灯笼袖毛衣+百搭高腰绑带半身裙子 套装</p>
+					   		<p class="price">￥28.00</p>
+						</li>
+                        <li>
+				    	   <a href="javascript:;"><img src="img/f68bb859e8d6d1759f2bc7d789fd34f5.jpg" height="270px"></a>
+					 		<p class="title">恩黛 2017新款甜美学院风两件套蕾丝上衣+显瘦背带连衣裙 Q047F6687</p>
+				    		<p class="price">￥55.90</p>
+						</li>						        		
+					</ul>
+                    <div><a class="prev"><</a><a class="next">></a></div>
+				</div>			
+			 </div>
+           </div>
+        </div>
+
+
+<div class="ds_bottom">
+    <div class="bottom_one">
+        <div class="widget_footer">
+            <ul>
+                <li><a><img src="/static/images/buyer/dsImg_21.jpg"> </a></li>
+                <li><a><img src="/static/images/buyer/dsImg_22.jpg"> </a></li>
+                <li><a><img src="/static/images/buyer/dsImg_23.jpg"> </a></li>
+                <li class="nobj"><a><img src="/static/images/buyer/dsImg_24.jpg"> </a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="bottom_two">
+        <div class="widget_footer">
+            <div class="f_left">
+                <h4>联系我们</h4>
+                <p class="p1">(020)28872118 /(020)28872158 </p>
+                <p class="p2"> trend@ecmob.cn</p>
+                <p class="p3">广州市中山大道89号天河软件园华景园区B栋西梯五楼</p>
+            </div>
+            <div class="f_right">
+                <dl>
+                    <dt><a >关于多商网</a></dt>
+                    <dd><a href="javascript:;" title="了解多商网">了解多商网</a></dd>
+                    <dd><a href="javascript:;" title="加入我们">加入我们</a></dd>
+                    <dd><a href="javascript:;" title="联系我们">联系我们</a></dd>
+                </dl>
+                <dl>
+                    <dt><a>分销商帮助</a></dt>
+                    <dd><a href="javascript:;" title="如何成为分销商">分销是什么</a></dd>
+                    <dd><a href="javascript:;" title="如何成为分销商">如何成为分销商</a></dd>
+                    <dd><a href="javascript:;" title="进货&分销上架流程图">进货分销流程</a></dd>
+                </dl>
+                <dl>
+                    <dt><a>成长路径</a></dt>
+                    <dd><a href="javascript:;" title="分销商成长路径">分销商成长路径</a></dd>
+                    <dd><a href="javascript:;" title="转介绍福利">转福利介绍</a></dd>
+                    <dd><a href="javascript:;" title="邀请有奖">邀请有奖</a></dd>
+                </dl>
+                <dl>
+                    <dt><a>报活动</a></dt>
+                    <dd><a href="javascript:;" title="申报活动">马上申请活动</a></dd>
+                    <dd><a href="javascript:;" title="活动产品">活动相关产品</a></dd>
+                    <dd><a href="javascript:;" title="申报活动">如何报活动</a></dd>
+                </dl>
+                <dl>
+                    <dt><a>供应商帮助</a></dt>
+                    <dd><a href="javascript:;" title="如何成为供应商">如何成为供应商</a></dd>
+                    <dd><a href="javascript:;" title="供应商点击入驻">我要入驻</a></dd>
+                    <dd><a href="javascript:;" title="供应商产品上架流程">产品上架流程</a></dd>
+                </dl>
+                <dl>
+                    <dt><a>帮助中心</a></dt>
+                    <dd><a href="javascript:;" title="找回密码">找回密码</a></dd>
+                    <dd><a href="javascript:;" title="常见问题">常见问题</a></dd>
+                    <dd><a href="javascript:;" title="多商学院">多商学院</a></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div class="bottom_three">
+        <div class="widget_footer">
+            <div class="f_left">2018-All rights Reseved</div>
+            <div class="f_right">
+                <ul>
+                    <li><a><img src="img/dsImg_29.jpg"></a></li>
+                    <li><a><img src="img/dsImg_30.jpg"></a></li>
+                    <li><a><img src="img/dsImg_31.jpg"></a></li>
+                    <li><a><img src="img/dsImg_32.jpg"></a></li>
+                    <li><a><img src="img/dsImg_33.jpg"></a></li>
+                    <li><a><img src="img/dsImg_34.jpg"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

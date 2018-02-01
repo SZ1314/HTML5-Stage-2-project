@@ -68,6 +68,13 @@ margin: 0 5px; }
 .tanchuang .ly_content .btn_input{width:100px;height:25px;line-height: 25px;text-align: center;background: #f00;border:none;margin:22px auto 0;display: block;color:#fff;cursor: pointer;}
 .close_end {position: absolute;right: 10px;top: 6px;color: #FFF;cursor: pointer;z-index: 2;}
 
+#kefu{position: fixed;top:50%;right:0px;margin-top: -220px;height:398px;z-index:99999999999;}
+#kefu .kefu{position: absolute;right:0px;width:0px;height:398px;padding-top: 47px;background:url(../img/57bd64c3b9abb.png);}
+#kefu .kefu .qq{display: block;margin-bottom: 9px;width:125px;height:30px;margin-left: 60px;}
+#kefu .kefu .liuyan{display: block;width:129px;height:30px;margin-left: 60px;margin-top: 14px;}
+#kefu .kefu .close{position: absolute;width:40px;height:129px;top:158px;left:0px;cursor: pointer;}
+#kefu .open{background:url(../img/57bd64c34b2f8.png);position: absolute;width:42px;height:129px;top:158px;right:0px;cursor: pointer;overflow: hidden;}
+
 /*回到顶部*/
 #kefu .qq_top{width:60px;height:54px;position:absolute;bottom:-150px;right:0px; margin-top:45px; background:url(../img/edo_ico_44.png) no-repeat left top;text-align:center;}
 #kefu .qq_top a{width:60px;height:54px;display:inline-block;float:left;}
